@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
     background: #f5f5f7;
@@ -15,6 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    width: 100%;
 }
 
 /* Display Area */
@@ -25,7 +31,8 @@ body {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    padding: 80px;
+    padding: 24px;
+    width: 100%;
     transition: background-color 1.2s linear;
 }
 
@@ -38,12 +45,12 @@ body {
 }
 
 .display-text {
-    font-size: 144px;
+    font-size: clamp(48px, 15vw, 180px);
     font-weight: 700;
     color: #ffffff;
     text-align: center;
     word-wrap: break-word;
-    max-width: 90%;
+    max-width: 100%;
     position: relative;
     z-index: 1;
     transition: color 1s linear;
@@ -363,11 +370,11 @@ body.fullscreen .controls-panel {
 /* Responsive */
 @media (max-width: 768px) {
     .display-text {
-        font-size: 96px;
+        font-size: clamp(48px, 20vw, 180px);
     }
 
     body.fullscreen .display-text {
-        font-size: 160px;
+        font-size: clamp(48px, 20vw, 180px);
     }
 
     .controls-panel {
@@ -376,12 +383,16 @@ body.fullscreen .controls-panel {
 }
 
 @media (max-width: 480px) {
+    .display-area {
+        padding: 8px;
+    }
+
     .display-text {
-        font-size: 72px;
+        font-size: clamp(48px, 22vw, 160px);
     }
 
     body.fullscreen .display-text {
-        font-size: 120px;
+        font-size: clamp(48px, 22vw, 160px);
     }
 
     .controls-panel {
@@ -577,11 +588,11 @@ body.fullscreen .controls-panel {
 /* Responsive */
 @media (max-width: 768px) {
     .display-text {
-        font-size: 96px;
+        font-size: clamp(48px, 20vw, 180px);
     }
 
     body.fullscreen .display-text {
-        font-size: 160px;
+        font-size: clamp(48px, 20vw, 180px);
     }
 
     .control-group {
@@ -598,12 +609,16 @@ body.fullscreen .controls-panel {
 }
 
 @media (max-width: 480px) {
+    .display-area {
+        padding: 8px;
+    }
+
     .display-text {
-        font-size: 72px;
+        font-size: clamp(48px, 22vw, 160px);
     }
 
     body.fullscreen .display-text {
-        font-size: 120px;
+        font-size: clamp(48px, 22vw, 160px);
     }
 
     .control-group {
