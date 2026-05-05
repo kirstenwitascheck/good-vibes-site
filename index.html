@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowd Display</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Main Display Area -->
+        <div class="display-area" id="displayArea">
+            <div class="display-text" id="displayText">Show me</div>
+        </div>
+
+        <!-- Settings Button (Always Visible) -->
+        <button id="settingsToggle" class="settings-btn" aria-label="Settings">
+            <!-- Gear Icon -->
+            <svg id="gearIcon" class="sf-icon" viewBox="0 0 24 24" width="24" height="24" style="display: block;">
+                <path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
+            </svg>
+            <!-- Close Icon -->
+            <svg id="closeIcon" class="sf-icon" viewBox="0 0 24 24" width="24" height="24" style="display: none;">
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+            </svg>
+        </button>
+
+        <!-- Controls Panel (Hidden by Default) -->
+        <div class="controls-panel" id="controlsPanel" style="display: none;">
+            <div class="panel-content">
+                <div class="control-group">
+                    <label for="textInput">Text:</label>
+                    <input type="text" id="textInput" placeholder="Enter text" value="Show me" class="apple-input" style="min-width: 0;">
+                </div>
+
+                <div class="control-group">
+                    <label for="bgColor">Background:</label>
+                    <input type="color" id="bgColor" class="apple-color-input">
+                </div>
+
+                <div class="control-group">
+                    <label for="textColor">Text Color:</label>
+                    <input type="color" id="textColor" class="apple-color-input">
+                </div>
+
+                <div class="control-group">
+                    <label for="flashingToggle" class="toggle-label">
+                        <input type="checkbox" id="flashingToggle" class="toggle-input">
+                        <span class="toggle-slider"></span>
+                        Flashing Effect
+                    </label>
+                </div>
+
+                <div class="control-group">
+                    <label for="autoColorToggle" class="toggle-label">
+                        <input type="checkbox" id="autoColorToggle" class="toggle-input">
+                        <span class="toggle-slider"></span>
+                        Auto Color
+                    </label>
+                </div>
+
+                <div class="control-group" id="speedGroup" style="display: none;">
+                    <label for="flashSpeed">Speed:</label>
+                    <div class="speed-control">
+                        <input type="range" id="flashSpeed" min="0.5" max="2" step="0.1" value="1" class="apple-slider">
+                        <span id="speedValue" class="speed-value">1.0x</span>
+                    </div>
+                </div>
+
+                <button id="fullscreenBtn" class="apple-btn">Fullscreen Mode</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
