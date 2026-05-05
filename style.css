@@ -38,7 +38,7 @@ body {
 }
 
 .display-text {
-    font-size: 72px;
+    font-size: 144px;
     font-weight: 700;
     color: #ffffff;
     text-align: center;
@@ -353,7 +353,7 @@ body.fullscreen .display-area {
 }
 
 body.fullscreen .display-text {
-    font-size: 120px;
+    font-size: 240px;
 }
 
 body.fullscreen .controls-panel {
@@ -363,11 +363,11 @@ body.fullscreen .controls-panel {
 /* Responsive */
 @media (max-width: 768px) {
     .display-text {
-        font-size: 48px;
+        font-size: 96px;
     }
 
     body.fullscreen .display-text {
-        font-size: 80px;
+        font-size: 160px;
     }
 
     .controls-panel {
@@ -377,11 +377,11 @@ body.fullscreen .controls-panel {
 
 @media (max-width: 480px) {
     .display-text {
-        font-size: 36px;
+        font-size: 72px;
     }
 
     body.fullscreen .display-text {
-        font-size: 60px;
+        font-size: 120px;
     }
 
     .controls-panel {
@@ -567,7 +567,7 @@ body.fullscreen .display-area {
 }
 
 body.fullscreen .display-text {
-    font-size: 120px;
+    font-size: 240px;
 }
 
 body.fullscreen .controls-panel {
@@ -577,11 +577,11 @@ body.fullscreen .controls-panel {
 /* Responsive */
 @media (max-width: 768px) {
     .display-text {
-        font-size: 48px;
+        font-size: 96px;
     }
 
     body.fullscreen .display-text {
-        font-size: 80px;
+        font-size: 160px;
     }
 
     .control-group {
@@ -599,11 +599,11 @@ body.fullscreen .controls-panel {
 
 @media (max-width: 480px) {
     .display-text {
-        font-size: 36px;
+        font-size: 72px;
     }
 
     body.fullscreen .display-text {
-        font-size: 60px;
+        font-size: 120px;
     }
 
     .control-group {
